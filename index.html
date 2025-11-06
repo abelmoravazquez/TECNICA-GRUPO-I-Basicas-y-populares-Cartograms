@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cartograma Comunidades Autónomas – Población y precio medio m² vivienda 2025</title>
+  <meta name="description" content="Cartograma interactivo que muestra la relación entre la población y el precio medio del metro cuadrado de vivienda en las Comunidades Autónomas de España en 2025." />
+  <style>
+    :root { --bg:#0b1020; --fg:#e7ecff; --muted:#aab3d0; }
+    html,body { height:100%; margin:0; background:var(--bg); color:var(--fg); font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 24px; }
+    header { display:flex; gap:16px; align-items:center; flex-wrap:wrap; }
+    h1 { font-size: clamp(20px, 3vw, 32px); margin: 0; }
+    p { color: var(--muted); line-height: 1.6; }
+    .card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 14px; box-shadow: 0 10px 30px rgba(0,0,0,0.25);}    
+    .iframeBox { position: relative; width: 100%; height: 0; padding-bottom: 66%; border-radius: 12px; overflow: hidden; }
+    .iframeBox iframe { position:absolute; top:0; left:0; width:100%; height:100%; border:0; }
+    .hint { font-size: 14px; margin-top: 10px; }
+    .links { display:flex; gap:12px; flex-wrap:wrap; margin-top:8px; }
+    .btn { display:inline-block; padding:10px 14px; border-radius:10px; border:1px solid rgba(255,255,255,0.15); text-decoration:none; color:var(--fg); background: rgba(255,255,255,0.03); }
+    .btn:hover { background: rgba(255,255,255,0.08); }
+    footer { margin-top: 28px; font-size: 13px; color: var(--muted); border-top: 1px solid rgba(255,255,255,0.1); padding-top: 14px; }
+    code { background: rgba(255,255,255,0.08); padding: 2px 6px; border-radius: 6px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M3 11l6-6 4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M21 14v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div>
+        <h1>Cartograma Comunidades Autónomas – Población y precio medio m² vivienda 2025</h1>
+        <p class="hint">Visualización interactiva que muestra cómo varía el tamaño de cada Comunidad Autónoma según su población y el color según el precio medio del m² de vivienda en 2025.</p>
+      </div>
+    </header>
+
+    <div class="card">
+      <div class="iframeBox">
+        <iframe src="https://go-cart.io/view/key/1762414253203UhjYdpVlugRPD5NtEqa/embed" width="800" height="550" style="border: 1px solid black;" loading="lazy" allowfullscreen></iframe>
+      </div>
+      <div class="links">
+        <a class="btn" href="https://go-cart.io/view/key/1762414253203UhjYdpVlugRPD5NtEqa" target="_blank" rel="noopener">Abrir en go‑cart.io</a>
+        <a class="btn" href="https://github.com/go-cart-io/cartogram-web" target="_blank" rel="noopener">Repo original go‑cart</a>
+      </div>
+    </div>
+
+    <footer>
+      <p><strong>Créditos y fuentes:</strong></p>
+      <p>Cartograma generado con <em>Go‑Cart.io</em> (basado en: Gastner MT, Seguy V, More P. <em>Fast flow‑based algorithm for creating density‑equalizing map projections.</em> <strong>Proc Natl Acad Sci USA</strong> 115(10):E2156–E2164, 2018).</p>
+      <p>Datos de precio medio por metro cuadrado obtenidos del informe mensual de Idealista: <a href="https://www.idealista.com/sala-de-prensa/informes-precio-vivienda/venta/report" target="_blank" rel="noopener">idealista.com/sala-de-prensa/informes-precio-vivienda/venta/report</a>.</p>
+      <p>Autor de la visualización: <strong>Abel Mora Vázquez</strong> — Máster en Ciencia de Datos, Visualización de Datos 2025.</p>
+    </footer>
+  </div>
+</body>
+</html>
